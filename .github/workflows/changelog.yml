@@ -42,8 +42,7 @@ jobs:
           SECURITY: ${{ secrets.TEAMS_WH_SECURITY }}
           SUPPORT: ${{ secrets.TEAMS_WH_SUPPORT }}
         run: |
-          CONFIG_PATH="changelog/.templates/config.json"
-          TEMPLATE_PATH="changelog/.templates/notification_template.j2"
+          TEMPLATE_PATH="changelog/.templates/default.j2"
           HEADERS='Content-type: application/json'
           FILTERED=${{ needs.get_changelogs.outputs.added }}
           echo "Detected changelog update: $FILTERED"
